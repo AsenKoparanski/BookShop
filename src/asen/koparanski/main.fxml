@@ -2,9 +2,45 @@
 
 <?import javafx.scene.layout.BorderPane?>
 
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Label?>
 <BorderPane fx:id="mainBorderPane"
             xmlns="http://javafx.com/javafx/11.0.1"
             xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="asen.koparanski.Controller">
-
+    <left>
+    <VBox maxWidth="220">
+    <children>
+        <HBox>
+            <Label text="  Employee Table: "/>
+        </HBox>
+        <TableView fx:id="bookTable" maxWidth="440" minWidth="440" VBox.vgrow="ALWAYS">
+            <columnResizePolicy>
+                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+            </columnResizePolicy>
+            <columns>
+                <TableColumn maxWidth="300" minWidth="300" text="Title">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="title" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn maxWidth="70" minWidth="70" text="Year">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="year" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn maxWidth="70" minWidth="70" text="Price">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="price" />
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+    </children>
+    </VBox>
+    </left>
 </BorderPane>
