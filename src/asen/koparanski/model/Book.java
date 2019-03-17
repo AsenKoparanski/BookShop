@@ -2,14 +2,24 @@ package asen.koparanski.model;
 
 public class Book {
 
+    private int id;
     private String name;
     private int year;
     private double price;
 
-    public Book(String name, int year, double price) {
+    public Book(int id, String name, int year, double price) {
+        this.id = id;
         this.name = name;
         this.year = year;
         this.price = price;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {
