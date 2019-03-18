@@ -26,12 +26,11 @@ public class Controller {
 
     @FXML
     private Label finalPrice;
-    @FXML
-    private BorderPane mainBorderPane;
 
     @FXML
     private TableView<Book> bookTable;
 
+    
     public void initialize() {
         bookTable.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
     }
