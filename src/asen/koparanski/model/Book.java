@@ -7,13 +7,13 @@ import javafx.beans.property.SimpleStringProperty;
 public class Book {
 
     private SimpleIntegerProperty id;
-    private SimpleStringProperty name;
+    private SimpleStringProperty title;
     private SimpleIntegerProperty year;
     private SimpleDoubleProperty price;
 
-    public Book(int id, String name, int year, double price) {
+    public Book() {
         this.id = new SimpleIntegerProperty();
-        this.name = new SimpleStringProperty();
+        this.title = new SimpleStringProperty();
         this.year = new SimpleIntegerProperty();
         this.price = new SimpleDoubleProperty();
     }
@@ -26,12 +26,12 @@ public class Book {
         this.id.set(id);
     }
 
-    public String getName() {
-        return name.get();
+    public String getTitle() {
+        return title.get();
     }
 
-    public void setName(String name) {
-        this.name.set(name);
+    public void setTitle(String title) {
+        this.title.set(title);
     }
 
     public int getYear() {
