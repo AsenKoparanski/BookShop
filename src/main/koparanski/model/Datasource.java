@@ -4,6 +4,12 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Author: Asen Koparanski
+ * Purpose: Handle database operations. Singleton class.
+ * Date: 17.03.2019
+ */
+
 public class Datasource {
 
     public static final String DB_NAME = "BookShop.db";
@@ -15,6 +21,7 @@ public class Datasource {
     public static final String COLUMN_BOOK_TITLE = "title";
     public static final String COLUMN_BOOK_YEAR = "year";
     public static final String COLUMN_BOOK_PRICE = "price";
+
     public static final int INDEX_BOOK_ID = 1;
     public static final int INDEX_BOOK_TITLE = 2;
     public static final int INDEX_BOOK_YEAR = 3;
@@ -27,14 +34,26 @@ public class Datasource {
 
     private PreparedStatement queryBooks;
 
-
+    /**
+     * Private constructor, not instantiatable outside of class.
+     */
     private Datasource() {
 
     }
+
+    /**
+     * Return the single instance of the class.
+     * @return instance
+     */
     public static Datasource getInstance() {
         return instance;
     }
 
+    /**
+     * Opens the SQL connection to the database.
+     * Notifies if succeeded or failed.
+     * @return boolean
+     */
     public boolean open() {
         try {
             conn = DriverManager.getConnection(CONNECTION_STRING);
@@ -46,6 +65,11 @@ public class Datasource {
             return false;
         }
     }
+    /**
+     * Closes the SQL connection to the database.
+     * Notifies if succeeded or failed.
+     * @return boolean
+     */
     public void close() {
         try {
             if (queryBooks != null) {
@@ -59,6 +83,10 @@ public class Datasource {
         }
     }
 
+    /**
+     * Query the database for a list of all the books.
+     * @return books
+     */
     public List<Book> queryBooks() {
 
         List<Book> books = new ArrayList<>();
