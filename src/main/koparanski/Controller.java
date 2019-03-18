@@ -30,7 +30,7 @@ public class Controller {
     @FXML
     private TableView<Book> bookTable;
 
-    
+
     public void initialize() {
         bookTable.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
     }
