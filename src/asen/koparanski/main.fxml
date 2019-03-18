@@ -50,9 +50,11 @@
     </left>
     <center>
         <VBox alignment="CENTER">
-            <Button maxWidth="120" text="Buy books" />
-            <Label maxWidth="120" text=" Total Price Amount: " />
-            <TextField fx:id="finalPrice" maxWidth="120"/>
+            <Button maxWidth="100" onAction="#buyBooksButton" text="Buy books" />
+            <HBox alignment="CENTER">
+                <Label maxWidth="120" text=" Total Price Amount: " />
+                <Label fx:id="finalPrice" maxWidth="120"/>
+            </HBox>
         </VBox>
     </center>
 </BorderPane>
