@@ -4,6 +4,13 @@ import javafx.beans.property.SimpleDoubleProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 
+/**
+ * Author: Asen Koparanski
+ * Purpose: Book object class, getters and setters.
+ * Simple String/Int/Double Property is used for data binding for the interface table.
+ * Date: 17.03.2019
+ */
+
 public class Book {
 
     private SimpleIntegerProperty id;
