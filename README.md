@@ -10,7 +10,8 @@ To run the application
 1. In project structure, you have to include the junit and sqlite jdbc driver as libraries.
 2. JavaFX 11 SDK needs to be added as a global library and as a Module to the current project.
 3. In the Datasource class, the CONNECTION_STRING path must be changed to the local path where the project resides.
-
+4. IMPORTANT: To select multiple rows from the table interface, you need to hold Control while pressing.
+5. To refresh the selected choices, you can use the refresh table button.
 
 #Notes
 
