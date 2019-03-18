@@ -5,6 +5,11 @@ import java.util.List;
 
 import static org.junit.Assert.*;
 
+/**
+ * Author: Asen Koparanski
+ * Purpose: Test the logic method in Discount class.
+ * Date: 18.03.2019
+ */
 public class DiscountTest {
 
     Discount discount = new Discount();
