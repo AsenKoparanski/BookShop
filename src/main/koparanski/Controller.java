@@ -18,7 +18,7 @@ import java.util.List;
 
 /**
  * Author: Asen Koparanski
- * Purpose:
+ * Purpose: GUI controller to manage user actions.
  * Date: 17.03.2019
  */
 
@@ -57,7 +57,10 @@ public class Controller {
         finalPrice.setText(String.format("%.2f", totalPrice));
     }
 }
-// Helper class to run a background thread for a potentially longer task.
+/*
+Helper class to run a potentially longer task on a background thread.
+Calls the method to query the database for all the books and returns an observable ArrayList.
+ */
 class GetAllBooksTask extends Task {
     @Override
     public ObservableList<Book> call() {
