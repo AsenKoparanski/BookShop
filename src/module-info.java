@@ -2,7 +2,8 @@ module BookShop {
     requires javafx.fxml;
     requires javafx.controls;
     requires java.sql;
+    requires junit;
 
-    opens asen.koparanski;
-    opens asen.koparanski.model;
+    opens main.koparanski;
+    opens main.koparanski.model;
 }
